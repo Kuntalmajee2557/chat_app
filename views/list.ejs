@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+        * {
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .chat {
+            margin: 5px;
+            padding: 10px;
+            background-color: rgb(95, 243, 243);
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .msg {
+            padding: 5px;
+            background-color: rgb(8, 136, 240);
+            border-radius: 5px;
+            color: white;
+        }
+    </style> -->
+</head>
+
+<body>
+    <% for(chat of chats){ %>
+        <div class="chat">
+            <p>from: <i>
+                    <%= chat.from %>
+                </i></p>
+            <div class="msg">
+                <%= chat.massage %>
+                    <form method="GET" action="http://localhost:8080/chats/<%= chat._id %>/edit">
+                        <button>edit</button>
+                    </form>
+            </div>
+            <p>to: <i>
+                    <%= chat.to %>
+                </i></p>
+
+            <hr>
+            <p><i>
+                    <%= chat.created_at.toString().split(" ")[4] %>
+            </i></p>
+            <p><i>
+                <%= chat.created_at.toString().split(" ").slice(0, 1).join(" ") %>
+                <%= chat.created_at.toString().split(" ").slice(1, 4).join(" -") %>
+                </i></p>
+            <form method="post" action="/chats/<%= chat._id %>/delete?_method=PATCH">
+                <button id="readed">readed</button>
+            </form>
+        </div>
+        <% } %>
+</body>
+
+</html>

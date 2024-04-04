@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Chat</title>
+</head>
+
+<body>
+    <form method="POST" action="/chats/new/add?_method=PATCH">
+        <label for="from">Who are you : </label>
+        <input type="text" id="from" name="from" placeholder="your name">
+        </br>
+        <label for="massage">massage : </label>
+        <input type="text" id="massage" name="massage">
+        </br>
+        <label for="to">Whom to send : </label>
+        <input type="text" id="to" name="to" placeholder="send to">
+        </br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
