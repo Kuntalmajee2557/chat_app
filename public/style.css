@@ -2,20 +2,32 @@
 
 
 
-*{
+* {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-.chat{
+
+.chat {
     margin: 5px;
     padding: 10px;
     background-color: rgb(95, 243, 243);
     display: inline-block;
     border-radius: 5px;
 }
-.msg{
+
+.msg {
     padding: 5px;
     background-color: rgb(8, 136, 240);
     border-radius: 5px;
     color: white;
+}
+
+.editBtn {
+    color: white;
+    background-color: rgb(71, 19, 205);
+    border: rgb(71, 19, 205) solid;
+    border-radius: 50px;
+    height: 32px;
+    width: 50px;
+    box-shadow: none;
 }
