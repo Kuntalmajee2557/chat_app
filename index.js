@@ -100,6 +100,9 @@ app.patch("/chats/list", async (req, res) => {
     let {toChat} = req.body;
     let chats = await Chat.find({to: toChat});
     console.log(chats);
+    if(chats.length == 0){
+        res.render("empty.ejs");
+    }
     res.render('list.ejs', {chats});
 })
 

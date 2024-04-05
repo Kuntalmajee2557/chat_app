@@ -31,3 +31,13 @@
     width: 50px;
     box-shadow: none;
 }
+
+.newBtn {
+    color: white;
+    background-color: rgb(1, 122, 242);
+    border: rgb(1, 122, 242) solid;
+    border-radius: 50px;
+    height: 32px;
+    width: auto;
+    box-shadow: none;
+}

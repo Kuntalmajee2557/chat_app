@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Whatsapp</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+    <h2>Welcome to Chat Room</h2>
     <form method="POST" action="http://localhost:8080/chats/list?_method=PATCH">
         <label for="toChat">Enter your name</label>
         <input type="text" name="toChat" id="toChat">
         <button>search</button>
     </form>
     <form method="GET" action="http://localhost:8080/chats/new">
-        <button>New Chat</button>
+        <button class="newBtn">New Chat</button>
     </form>
     <% for(chat of chats){ %>
         <div class="chat">
